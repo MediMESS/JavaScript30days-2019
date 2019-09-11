@@ -1,0 +1,25 @@
+html, body {
+  margin: 0 auto;
+  height: 100vh;
+}
+body {
+  background: url('../img/bg2-drums.jpg') ;
+  background-size: cover;
+}
+.container {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  color: white;
+}
+.container-grid-effects {
+  display: flex;
+  flex-direction: row no-wrap;
+}
+.container-sounds * {
+  background: white;
+  color: black;
+
+}
