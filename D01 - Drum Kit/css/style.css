@@ -52,6 +52,7 @@ h1 {
   background: rgba(60, 11, 11, 0.5);
   border : 5px solid #373432;
   border-radius: 10px;
+  transition: all .07s;
 }
 .effect-name{
   font-family: 'Merriweather', serif;
