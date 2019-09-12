@@ -22,25 +22,3 @@ document.addEventListener("keydown",async function effectStyle (event) {
     }
   }
 });
-
-
-
-
-
-
-
-// if(event.key.toUpperCase()==effect.children[1].textContent.toUpperCase() ) {
-//   if (currEffect) {
-//     effect.classList.add("effects_style");
-//     effect.children[0].play();
-//     currEffect = effect;
-//     setTimeout( () => {currEffect.classList.remove("effects_style")}, 100);
-//   }
-//   else {
-//     effect.classList.add("effects_style");
-//     effect.children[0].play();
-//     currEffect = effect;
-//   }
-//   break;
-// }
-// }
