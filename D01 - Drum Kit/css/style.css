@@ -72,8 +72,11 @@ h1 {
   font-size: 40px;
   margin-bottom: 5px;
 }
-.effect:hover {
-    border: 5px solid rgb(255, 224, 29);
-    transform: scale(2);
-    box-shadow: 0 0 10px rgb(255, 224, 29);
+.effects_style {
+  border: 5px solid rgb(255, 224, 29);
+  transform: scale(2);
+  box-shadow: 0 0 10px rgb(255, 224, 29);
+}
+.grid-wrapper-effects:hover {
+  cursor: none;
 }
