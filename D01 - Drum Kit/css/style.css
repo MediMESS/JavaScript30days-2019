@@ -27,24 +27,16 @@ h1 {
   font-size: 150px;
   margin: 0;
   font-family: 'Lobster', cursive;
-  color: rgba(161, 52, 52, 1);;
   color: rgba(99, 39, 34, 0.93);
-    /* color: rgba(148, 20, 16, 0.89); */
   text-decoration: underline;
 }
-.grid-wrapper-effects {
+.container-effects {
   width: 80%;
   padding: 0 200px;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
 }
-/* GRID Solution
- .container-grid-effects {
-  display: grid;
-  grid-gap: 30px;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-  } */
 .effect * {
   margin: 0;
   width: 100%;
@@ -77,6 +69,6 @@ h1 {
   transform: scale(2);
   box-shadow: 0 0 10px rgb(255, 224, 29);
 }
-.grid-wrapper-effects:hover {
+.container-effects:hover {
   cursor: none;
 }
