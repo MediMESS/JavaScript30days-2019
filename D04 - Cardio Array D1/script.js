@@ -1,11 +1,11 @@
-function compare_ascending(a, b) {
+function compare_numbers_ascending(a, b) {
   if(a > b)
   return 1;
   if (a < b)
   return -1;
   return 0;
 }
-function compare_descending(a, b) {
+function compare_numbers_descending(a, b) {
   if (a > b)
   return -1;
   if (b > a)
@@ -31,16 +31,12 @@ const inventors = [
 /* 1. Filter the list of inventors for those who were born in the 1500's */
 const inventors_XVIe = inventors.filter( inventor => {
   return (inventor.year>=1500) && (inventor.year<1600) ;  });
-  // correction
-  // ((inventor.year>=1500) && (inventor.year<1600) )
 console.log('This is people from 1500\'s ');
 console.log(inventors_XVIe);
 
 /* 2. Give us an array of the inventors' first and last names */
 const inventors_initials = inventors.map ((inventor) => {
     return [inventor.first, inventor.last]; });
-    // correction
-    // `${inventor.first} ${inventor.last}`
 console.log(inventors_initials);
 
 /* 3. Sort the inventors by birthdate, oldest to youngest */
@@ -49,10 +45,8 @@ sort_desc_year_inventors = JSON.parse(JSON.stringify(inventors));
 console.log("Inventors: ", inventors);
 
 sort_asc_year_inventors.sort((a,b)=>{
-  return compare_ascending(a.year, b.year);
+  return compare_numbers_ascending(a.year, b.year);
 });
-// correction
-// inventors.sort((a,b)=> a.year > b.year ? 1 : -1 );
 console.log("Sort ASCENDING: ", sort_asc_year_inventors);
 
 // Youngest to oldest
@@ -72,17 +66,12 @@ inventors.forEach(inventor => {
 });
 // How many years did all live
 const nb_all_lived = inventors.reduce((acc, inventor) => acc+inventor.lived, 0);
-// correction
-// inventors.reduce( (total, inventor) =>{ return total+(inventor.passed - inventor.year)}, 0);
 console.log("number of years they all lived in = ", nb_all_lived);
-
 /* 5. Sort the inventors by years lived */
 sort_lived_inventors = JSON.parse(JSON.stringify(inventors));
 sort_lived_inventors.sort( (a,b) => {
-  return compare_ascending(a.lived, b.lived);
+  return compare_numbers_ascending(a.lived, b.lived);
 });
-//correction
-// inventors.sort ( function (a,b) { const lastGuy = a.passed - a.year; const nextGuy = b.passed - b.year; return lastGuy > nextGuy ? 1 : -1;});
 console.log("Lived Ascending sort: ", sort_lived_inventors);
 
 /*6. create a list of Boulevards in Paris that contain 'de' anywhere in the name*/
@@ -90,12 +79,6 @@ console.log("Lived Ascending sort: ", sort_lived_inventors);
 boulevards = Array.from(document.querySelectorAll(".mw-category li"));
 boulevards = boulevards.map(li => li.textContent );
 filtered_boulevard = boulevards.filter(boulevard => boulevard.includes("de "));
-
-// correction
-// const category = document.querySelector('.mw-category');             const links = Array.from(category.querySelector('a'));              const de = links
-//            .map(link => link.textContent )
-//            .filter (streetName => streetName.includes('de'));
-
 
 /* Sort the people alphabetically by last name */
 const people = ['Beck, Glenn', 'Becker, Carl', 'Beckett, Samuel', 'Beddoes, Mick', 'Beecher, Henry', 'Beethoven, Ludwig', 'Begin, Menachem', 'Belloc, Hilaire', 'Bellow, Saul', 'Benchley, Robert', 'Benenson, Peter', 'Ben-Gurion, David', 'Benjamin, Walter', 'Benn, Tony', 'Bennington, Chester', 'Benson, Leana', 'Bent, Silas', 'Bentsen, Lloyd', 'Berger, Ric', 'Bergman, Ingmar', 'Berio, Luciano', 'Berle, Milton', 'Berlin, Irving', 'Berne, Eric', 'Bernhard, Sandra', 'Berra, Yogi', 'Berry, Halle', 'Berry, Wendell', 'Bethea, Erin', 'Bevan, Aneurin', 'Bevel, Ken', 'Biden, Joseph', 'Bierce, Ambrose', 'Biko, Steve', 'Billings, Josh', 'Biondo, Frank', 'Birrell, Augustine', 'Black, Elk', 'Blair, Robert', 'Blair, Tony', 'Blake, William'];
@@ -105,16 +88,10 @@ function getLastName(fullName) {
 }
 const sort_people = [].concat(
   people.sort( (person1, person2) => {
-    return compare_ascending(getLastName(person1), getLastName(person2));
+    return compare_numbers_ascending(getLastName(person1), getLastName(person2));
   })
 )
 console.log("AFTER :", sort_people);
-// correction
-/* people.sort( (firstOne, nextOne) => {
-  const [aLast, aFirst] = lastOne.split(", ");
-  const [bLast, bFirst] = nextOne.split(", ");
-  return aLast > bLast ? 1 : -1;
-});
 
 /* Sum up the instances of each of these */
 const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
@@ -124,13 +101,3 @@ data.forEach( d => {
     p.push(d);
 });
 console.log(p);
-// correction
-/*
-const transportation = data.reduce( function(obj, item) {
-  if (!obj[item])
-    obj[item]=0;
-  obj[item]++;
-  return obj;
-}, {});
-console.log(transportation)
-*/
