@@ -35,5 +35,13 @@ console.log(com);
 // Find the comment with this ID
 // delete the comment with the ID of 823423
 console.log("BEFORE", comments);
-let comments2 = comments.slice(comments.findIndex(com=>com.id==823423));
-console.log("AFTER", comments2);
+let index = comments.findIndex(com=>com.id==823423);
+let comments2 = comments.slice(index);
+console.log("AFTER1:", comments2);
+// common in the redux world
+let comments3 =
+[
+  ...comments.slice(0, index),
+  ...comments.slice(index+1)
+];
+console.log("AFTER2:", comments3);
