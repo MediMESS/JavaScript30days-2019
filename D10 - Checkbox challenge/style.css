@@ -1,0 +1,39 @@
+html {
+  height: 100%;
+  margin: 0;
+  background: #ffc600;
+  font-size: 20px;
+  font-weight: 100;
+}
+body {
+  margin: 0;
+}
+
+.container{
+  width: 400px;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding: 0;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  display : flex;
+  background: white;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container li {
+  list-style: none;
+  border-bottom : 2px solid rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.container li input{
+  margin:20px;
+}
+.container li label {
+  padding: 20px;
+  border-left: 2px solid rgba(0, 0, 0, 0.3);
+}
