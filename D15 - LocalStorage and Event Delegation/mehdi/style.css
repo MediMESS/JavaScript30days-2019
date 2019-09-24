@@ -1,0 +1,72 @@
+html {
+  height: 100%;
+}
+body{
+  margin: 0;
+  min-height: 100%;
+  background: url(https://img.theculturetrip.com/768x432/wp-content/uploads/2017/08/restaurant-691397_1280.jpg) no-repeat center;
+  background-size: cover;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.8);
+  font-family: 'Helvetica';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.menu-container {
+  padding: 10px;
+  background: rgba(255,255,255, 0.8);
+  margin-top: 50px;
+}
+.menu-container > p{
+  font-weight: 600;
+  font-size: 1.3em;
+  padding: 10px;
+  margin: 10px 0;
+  text-align: center;
+}
+.list-toppings{
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.list-toppings li{
+  list-style-type: none;
+  font-weight: 700;
+  font-size: .9em;
+  padding: 5px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+.list-toppings li span{
+  margin-right: 10px;
+}
+.new-topping {
+  display: flex;
+  flex: row nowrap;
+  align-items: center;
+}
+.new-topping *{
+  flex-grow: 1;
+}
+
+input[type="text"]{
+  height: 20px;
+}
+button {
+  /* background: rgba(0, 0, 0, 0.5); */
+  background-color: rgba(0, 0, 0, 0.3);
+  border:1px solid rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  margin-left: 2px;
+  cursor: pointer;
+  font-size: 15px;
+
+}
