@@ -1,0 +1,31 @@
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+body {
+  min-height: 100vh;
+  background: url("https://source.unsplash.com/nDqA4d5NL0k/2000x2000") center ;
+  background-size: cover;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  font-family: sans-serif;
+  font-weight: 600;
+}
+.bands {
+  width: 400px;
+  background: white;
+  color: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+  padding: 0;
+  list-style-position: inside;
+}
+.bands li {
+  padding: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
