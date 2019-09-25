@@ -1,0 +1,54 @@
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+body {
+  min-height: 100vh;
+  background:
+    linear-gradient(45deg, hsla(340, 100%, 55%, 1) 0%, hsla(340, 100%, 55%, 0) 70%),
+    linear-gradient(135deg, hsla(225, 95%, 50%, 1) 10%, hsla(225, 95%, 50%, 0) 80%),
+    linear-gradient(225deg, hsla(140, 90%, 50%, 1) 10%, hsla(140, 90%, 50%, 0) 80%),
+    linear-gradient(315deg, hsla(35, 95%, 55%, 1) 100%, hsla(35, 95%, 55%, 0) 70%);
+  margin: 0;
+  font-family: sans-serif;
+}
+.menu {
+  padding: 0;
+  margin: 100px auto;
+  max-width: 600px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: black;
+  padding: 5px;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+}
+
+.highlight {
+  background: white;
+  border-radius: 20px;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  transition: all .2s;
+  /* display: block; */
+  border-bottom: 2px solid white;
+  box-shadow:  0 0 10px rgba(0, 0, 0, )
+}
+.wrapper {
+  max-width: 500px;
+  margin: 0 auto;
+  font-size: 20px;
+  line-height: 2;
+  position: relative;
+
+}
