@@ -1,0 +1,88 @@
+html {
+  box-sizing: border-box;
+  background: #eeeeee;
+  font-size: 20px;
+  font-weight: 200;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Times';
+  display: flex;
+  flex-direction: column;
+}
+header {
+  height: 50vh;
+  background: url(https://picsum.photos/1000/1000) center;
+  background-size: cover;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  font-weight: 600;
+  font-size: 60px;
+  text-shadow: 5px 5px 0px rgba(0, 0, 0, .3);
+}
+nav{
+  background: black;
+  width: 100%;
+  position: relative;
+  transition: all 0.5s;
+  top: 0;
+  z-index: 1;
+}
+body.fixed-nav nav {
+  position: fixed;
+  box-shadow: 0 5px 0 rgba(0,0,0,0.1);
+}
+.links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+.links li {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.links li.logo {
+  max-width: 0;
+  overflow: hidden;
+  background: white;
+  transition: all .5s;
+  font-weight: 600;
+  font-size: 30px;
+}
+li.logo a {
+  color: black;
+}
+.links a {
+  text-decoration: none;
+  padding: 20px;
+  color: white;
+  transition: all .2s;
+  text-transform: uppercase;
+}
+.fixed-nav li.logo{
+  max-width: 500px;
+}
+.story {
+  max-width: 700px;
+  margin: 70px auto;
+  padding: 40px;
+  text-align: justify;
+  background: white;
+  transform: scale(0.98);
+  transition: transform .5s;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.05);
+}
+body.fixed-nav .story{
+  transform: scale(1);
+}
